@@ -1,0 +1,139 @@
+/* Psuedo Class to help with redundancy*/
+:root {
+  --bgColor: #f5f5f5;
+  --color2: navy;
+}
+
+/*--Universal Selector */
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+}
+
+/* Global Selectors */
+body {
+  background-color: var(--bgColor);
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 15px;
+}
+
+h2 {
+  color: var(--color2);
+  font-weight: 500;
+  margin: 5px;
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+  margin: 15px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: #70707a;
+}
+
+button {
+  display: inline-block;
+  margin: 6px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 140%;
+  background-color: var(--color2);
+  border-radius: 15px;
+  padding: 4px 12px;
+  color: var(--bgColor);
+  border: 0;
+}
+
+button:hover {
+  background-color: gold;
+}
+
+ol {
+  padding-left: 0px;
+  overflow: auto;
+  max-height: 450px;
+}
+
+li {
+  padding: 8px;
+  list-style: decimal inside none;
+}
+
+li:nth-child(odd) {
+  background-color: var(--bgColor);
+}
+
+input[type="text"] {
+  font-size: 100%;
+}
+
+/* Class Styling */
+.hide {
+  display: none;
+}
+
+.wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 500px;
+ }
+
+.options button {
+  display: block;
+}
+
+.wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
+}
+
+.hide {
+  display: none;
+}
+
+.start {
+  text-align: center;
+}
+
+.feedback {
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 10px;
+  color: var(--bgColor);
+  border-top: 2px solid var(--color2);
+}
+
+.highscores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.choices button {
+  display: block;
+}
