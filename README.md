@@ -32,7 +32,7 @@
 Open your web browser and enter the following web address to access:
 
 ```html
-<!-- add live link when published -->
+https://louiskgkim.github.io/Code-Quiz/
 ```
 
 <a name="us&uc"></a>
