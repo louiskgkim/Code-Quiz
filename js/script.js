@@ -120,7 +120,7 @@ function clockTick() {
 
 /* 
 Save final score ot local storage or if not any, set to an empty array.
-Page will then redirect to the highscore page.
+Page will then redirect to the highscore page. JSON.stringify was helpful from one of the classes
 */
 function saveHighscore() {
 
