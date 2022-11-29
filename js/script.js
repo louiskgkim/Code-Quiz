@@ -44,6 +44,7 @@ function getQuestion() {
   
   currentQuestion.choices.forEach(function (choice, i) {
     var option = document.createElement("button");
+    
     option.setAttribute("class", "choice");
     option.setAttribute("value", choice);
 
@@ -66,7 +67,6 @@ function questionClick() {
     if (timeLeft < 0) {
       timeLeft = 0;
     }
-
     timerEl.textContent = timeLeft;
     feedbackEl.textContent = "Incorrect!";
     feedbackEl.style.color = "red";
@@ -78,6 +78,7 @@ function questionClick() {
   }
 
   feedbackEl.setAttribute("class", "feedback");
+
   setTimeout(function () {
     feedbackEl.setAttribute("class", "feedback hide");
   }, 1000);
@@ -120,7 +121,7 @@ function clockTick() {
 
 /* 
 Save final score ot local storage or if not any, set to an empty array.
-Page will then redirect to the highscore page. JSON.stringify was helpful from one of the classes
+Page will then redirect to the highscore page. JSON.stringify and JSON.parse was helpful from one of the classes
 */
 function saveHighscore() {
 
@@ -137,7 +138,6 @@ function saveHighscore() {
 
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
-
     window.location.href = "highscore.html";
   }
 }
@@ -149,7 +149,5 @@ function checkForEnter(event) {
 }
 
 submitBtn.onclick = saveHighscore;
-
 startBtn.onclick = startQuiz;
-
 initialsEl.onkeyup = checkForEnter;
